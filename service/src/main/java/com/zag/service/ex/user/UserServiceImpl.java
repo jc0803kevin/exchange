@@ -168,7 +168,7 @@ public class UserServiceImpl extends AbstractBaseService implements UserService{
         IdService idService=new IdService(0);
         UserAccountPo userAccountPo = new UserAccountPo();
         // 保存钱包到本地
-        String ethAccount = CreatEthAccount.saveEthAccount("E:\\Wallet\\"+userPo.getId()+"\\eth",);//  你自己设置的密码
+        String ethAccount = CreatEthAccount.saveEthAccount("E:\\Wallet\\"+userPo.getId()+"\\eth",null);//  你自己设置的密码
         // 存储地址进总账户， （如果自己搭节点可不用这种方法，infura 不支持admin创建账户，无法查看节点创建的所有账户，所以要进行保存进总账户地址里）
         String keystore = FileUtil.readToString("E:\\Wallet\\"+userPo.getId()+"\\eth\\"+ethAccount);
         JSONObject jsStr = JSONObject.parseObject(keystore);

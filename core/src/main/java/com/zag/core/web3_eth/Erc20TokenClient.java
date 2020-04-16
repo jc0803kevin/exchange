@@ -92,7 +92,7 @@ public class Erc20TokenClient {
      */
     public static String erc20TokenTransaction(String keystore, String contractAddress, String toAddress, double amount, int decimals) throws IOException {
 
-        String privateKey = DecryptWallet.decryptWallet(keystore, );//  你自己设置的密码
+        String privateKey = DecryptWallet.decryptWallet(keystore, "");//  你自己设置的密码
         BigInteger nonceNet = DecryptWallet.getKeyStoreNonce(keystore);
         //gasPraice 手动设置
         //BigInteger gasPrice = Convert.toWei(BigDecimal.valueOf(10), Convert.Unit.GWEI).toBigInteger();

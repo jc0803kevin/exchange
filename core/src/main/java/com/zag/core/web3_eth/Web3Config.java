@@ -17,7 +17,7 @@ import org.web3j.protocol.http.HttpService;
  */
 public class Web3Config {
     //infura环境   你自己的infura
-    public static String web3j = ;
+    public static String web3j = "";
     //热钱包本地地址（提币）（收款）
     public static String hotWallet = "E:\\Wallet\\0\\eth\\eth.json";
     // 冷钱包账户地址 （收款）

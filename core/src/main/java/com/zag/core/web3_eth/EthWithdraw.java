@@ -40,7 +40,7 @@ public class EthWithdraw {
     public static String ethTokenTransaction(String toAddress, double amount) throws IOException {
         //获得keysotre文件
         String keystore = FileUtil.readToString(Web3Config.hotWallet);
-        String privateKey = DecryptWallet.decryptWallet(keystore, );//  你自己设置的密码
+        String privateKey = DecryptWallet.decryptWallet(keystore, null);//  你自己设置的密码
         BigInteger nonceNet = DecryptWallet.getKeyStoreNonce(keystore);
         // 比较nonce
         nonce = DecryptWallet.sortNonce(nonce, nonceNet);
@@ -81,7 +81,7 @@ public class EthWithdraw {
      */
     public static String ethTransactionToAddress(String keystore, String toAddress, double amount) throws IOException {
         //获得keysotre文件
-        String privateKey = DecryptWallet.decryptWallet(keystore, );//  你自己设置的密码
+        String privateKey = DecryptWallet.decryptWallet(keystore, null);//  你自己设置的密码
         BigInteger nonceNet = DecryptWallet.getKeyStoreNonce(keystore);
         //gasPraice 手动设置
         //BigInteger gasPrice = Convert.toWei(BigDecimal.valueOf(2), Convert.Unit.GWEI).toBigInteger();

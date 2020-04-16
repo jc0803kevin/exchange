@@ -51,7 +51,7 @@ public class Erc20Withdraw {
 
         //获得keysotre文件
         String keystore = FileUtil.readToString(Web3Config.hotWallet);
-        String privateKey = DecryptWallet.decryptWallet(keystore, );//  你自己设置的密码
+        String privateKey = DecryptWallet.decryptWallet(keystore, null);//  你自己设置的密码
         BigInteger nonceNet = DecryptWallet.getKeyStoreNonce(keystore);
         // 比较nonce
         nonce = DecryptWallet.sortNonce(nonce, nonceNet);
